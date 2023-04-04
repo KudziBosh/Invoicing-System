@@ -1,24 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header";
+import ClientDetails from "./components/ClientDetails";
+import Dates from "./components/Dates";
+import Footer from "./components/Footer";
+import MainDetails from "./components/MainDetails";
+import Notes from "./components/Notes";
+import Table from "./components/Table";
+
 
 function App() {
+  const handlePrint = () =>{
+    window.print()
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <main>
+      {/*Header */}
+       <Header/>
+          {/* End of Header */} 
+{/*Your Details */}
+      <MainDetails/>
+{/*End of your Details */}     
+
+ {/*Client Details*/}
+    <ClientDetails/>
+ {/*End Of Client Details*/}
+
+ 
+ {/*Dates*/}
+    <Dates/>
+   {/*End of Dates*/}
+
+
+    {/*Table*/}
+   
+    {/*End of Table*/}
+
+    {/*Notes*/}
+    <Notes/>
+ 
+ {/*Footer*/}
+<Footer/>
+    </main>
+    
+      
+    </>
   );
 }
 
